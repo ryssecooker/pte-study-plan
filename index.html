@@ -1,0 +1,387 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2856
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en" class="light">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1" />\
+  <title>PTE Academic Study Plan</title>\
+  <script src="https://cdn.tailwindcss.com"></script>\
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>\
+  <style>\
+    /* Scroll styling */\
+    .content-scroll \{\
+      max-height: 60vh;\
+      overflow-y: auto;\
+      scrollbar-width: thin;\
+      scrollbar-color: #3498db transparent;\
+    \}\
+    .content-scroll::-webkit-scrollbar \{\
+      width: 8px;\
+    \}\
+    .content-scroll::-webkit-scrollbar-thumb \{\
+      background-color: #3498db;\
+      border-radius: 4px;\
+    \}\
+    /* Fade-in animation */\
+    .fade-in \{\
+      animation: fadeIn 0.8s ease forwards;\
+      opacity: 0;\
+    \}\
+    @keyframes fadeIn \{\
+      to \{\
+        opacity: 1;\
+      \}\
+    \}\
+    /* Card hover effect */\
+    .card:hover \{\
+      transform: translateY(-6px);\
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);\
+      transition: all 0.3s ease;\
+    \}\
+    .card \{\
+      transition: all 0.3s ease;\
+    \}\
+    /* Responsive video */\
+    .video-wrapper \{\
+      position: relative;\
+      padding-bottom: 56.25%;\
+      padding-top: 25px;\
+      height: 0;\
+      overflow: hidden;\
+      border-radius: 0.5rem;\
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);\
+    \}\
+    .video-wrapper iframe, \
+    .video-wrapper video \{\
+      position: absolute;\
+      top: 0;\
+      left: 0;\
+      width: 100%;\
+      height: 100%;\
+    \}\
+  </style>\
+</head>\
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition duration-300">\
+  <header\
+    class="bg-blue-600 dark:bg-blue-800 text-white py-6 px-4 shadow flex flex-col md:flex-row md:items-center md:justify-between"\
+  >\
+    <h1 class="text-3xl font-bold mb-3 md:mb-0 flex items-center space-x-3">\
+      <i data-feather="book-open" class="w-8 h-8 text-white"></i>\
+      <span>PTE Academic Study Plan</span>\
+    </h1>\
+    <div class="flex items-center space-x-4">\
+      <button\
+        id="theme-toggle"\
+        aria-label="Toggle dark mode"\
+        class="px-4 py-2 text-sm bg-white dark:bg-gray-700 dark:text-white text-blue-600 rounded shadow hover:bg-gray-100 dark:hover:bg-gray-600 transition flex items-center space-x-2"\
+      >\
+        <i data-feather="sun" id="icon-sun" class="inline-block w-5 h-5"></i>\
+        <i data-feather="moon" id="icon-moon" class="hidden w-5 h-5"></i>\
+        <span class="sr-only">Toggle theme</span>\
+      </button>\
+      <nav class="flex space-x-3" role="navigation" aria-label="Primary">\
+        <button\
+          class="tab-btn px-4 py-2 font-medium rounded-md bg-blue-500 text-white"\
+          data-tab="home"\
+          aria-current="page"\
+        >\
+          Home\
+        </button>\
+        <button\
+          class="tab-btn px-4 py-2 font-medium rounded-md bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-white"\
+          data-tab="daily"\
+        >\
+          Daily Plan\
+        </button>\
+        <button\
+          class="tab-btn px-4 py-2 font-medium rounded-md bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-white"\
+          data-tab="resources"\
+        >\
+          Resources\
+        </button>\
+        <button\
+          class="tab-btn px-4 py-2 font-medium rounded-md bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-white"\
+          data-tab="testday"\
+        >\
+          Test Day\
+        </button>\
+      </nav>\
+    </div>\
+  </header>\
+\
+  <main class="max-w-5xl mx-auto px-4 py-8 space-y-12">\
+    <!-- Home Page -->\
+    <section id="home" class="tab-content block fade-in" tabindex="0">\
+      <h2 class="text-3xl font-semibold mb-6 flex items-center space-x-3">\
+        <i data-feather="home" class="w-7 h-7 text-blue-600 dark:text-blue-400"></i>\
+        <span>Welcome!</span>\
+      </h2>\
+      <p class="mb-6 max-w-3xl text-gray-700 dark:text-gray-300 leading-relaxed">\
+        This is your personalized PTE Academic Study Plan running from June 23 to September 6, 2025. Use the tabs above to navigate through your daily plan, study resources, and important test day tips.\
+      </p>\
+\
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">\
+        <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center">\
+          <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mb-4">\
+            <i data-feather="calendar" class="w-10 h-10 text-blue-600 dark:text-blue-400"></i>\
+          </div>\
+          <h3 class="text-lg font-bold mb-2">Total Study Days</h3>\
+          <p class="text-4xl font-extrabold text-blue-600 dark:text-blue-400" id="stat-days">0</p>\
+        </div>\
+\
+        <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center">\
+          <div class="bg-green-100 dark:bg-green-900 p-3 rounded-full mb-4">\
+            <i data-feather="clock" class="w-10 h-10 text-green-600 dark:text-green-400"></i>\
+          </div>\
+          <h3 class="text-lg font-bold mb-2">Daily Study Time</h3>\
+          <p class="text-4xl font-extrabold text-green-600 dark:text-green-400">2h</p>\
+        </div>\
+\
+        <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center">\
+          <div class="bg-purple-100 dark:bg-purple-900 p-3 rounded-full mb-4">\
+            <i data-feather="trending-up" class="w-10 h-10 text-purple-600 dark:text-purple-400"></i>\
+          </div>\
+          <h3 class="text-lg font-bold mb-2">Total Hours</h3>\
+          <p class="text-4xl font-extrabold text-purple-600 dark:text-purple-400" id="stat-hours">0</p>\
+        </div>\
+      </div>\
+\
+      <h3 class="text-2xl font-semibold mb-4 flex items-center space-x-2">\
+        <i data-feather="video" class="w-6 h-6 text-blue-600 dark:text-blue-400"></i>\
+        <span>Introductory Video</span>\
+      </h3>\
+      <div class="video-wrapper mb-10">\
+        <iframe\
+          src="https://www.youtube.com/embed/ZqfpZ-5OEeI"\
+          title="PTE Academic Introduction"\
+          frameborder="0"\
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\
+          allowfullscreen\
+        ></iframe>\
+      </div>\
+\
+      <h3 class="text-2xl font-semibold mb-4 flex items-center space-x-2">\
+        <i data-feather="image" class="w-6 h-6 text-blue-600 dark:text-blue-400"></i>\
+        <span>Study Inspiration</span>\
+      </h3>\
+      <img\
+        src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"\
+        alt="Person studying with laptop and notes"\
+        class="rounded-lg shadow-lg mx-auto max-w-full"\
+        loading="lazy"\
+      />\
+    </section>\
+\
+    <!-- Daily Plan -->\
+    <section\
+      id="daily"\
+      class="tab-content hidden fade-in content-scroll bg-white dark:bg-gray-800 rounded-lg shadow p-6 max-h-[60vh] overflow-y-auto"\
+      tabindex="0"\
+    >\
+      <h2 class="text-3xl font-semibold mb-6 flex items-center space-x-3">\
+        <i data-feather="calendar" class="w-7 h-7 text-blue-600 dark:text-blue-400"></i>\
+        <span>Daily Study Plan</span>\
+      </h2>\
+      <div id="daily-plan" class="space-y-6"></div>\
+    </section>\
+\
+    <!-- Resources -->\
+    <section\
+      id="resources"\
+      class="tab-content hidden fade-in bg-white dark:bg-gray-800 rounded-lg shadow p-6 max-h-[60vh] overflow-y-auto"\
+      tabindex="0"\
+    >\
+      <h2 class="text-3xl font-semibold mb-6 flex items-center space-x-3">\
+        <i data-feather="book" class="w-7 h-7 text-blue-600 dark:text-blue-400"></i>\
+        <span>Free Study Resources</span>\
+      </h2>\
+      <ul class="list-disc pl-5 space-y-4 text-blue-600 dark:text-blue-400">\
+        <li>\
+          <a\
+            href="https://www.englishgrammar.org/"\
+            target="_blank"\
+            rel="noopener noreferrer"\
+            class="hover:underline"\
+            >EnglishGrammar.org</a\
+          >\
+          \'96 Grammar fundamentals\
+        </li>\
+        <li>\
+          <a\
+            href="https://www.youtube.com/@E2PTE"\
+            target="_blank"\
+            rel="noopener noreferrer"\
+            class="hover:underline"\
+            >E2 PTE YouTube Channel</a\
+          >\
+          \'96 Exam strategy and speaking\
+        </li>\
+        <li>\
+          <a\
+            href="https://ptepractice.com/"\
+            target="_blank"\
+            rel="noopener noreferrer"\
+            class="hover:underline"\
+            >PTE Practice</a\
+          >\
+          \'96 Mock tests and section practice\
+        </li>\
+        <li>\
+          <a\
+            href="https://speechling.com/"\
+            target="_blank"\
+            rel="noopener noreferrer"\
+            class="hover:underline"\
+            >Speechling</a\
+          >\
+          \'96 Speaking/pronunciation with coaching\
+        </li>\
+        <li>\
+          <a\
+            href="https://writeandimprove.com/"\
+            target="_blank"\
+            rel="noopener noreferrer"\
+            class="hover:underline"\
+            >Write & Improve</a\
+          >\
+          \'96 Writing feedback\
+        </li>\
+      </ul>\
+    </section>\
+\
+    <!-- Test Day -->\
+    <section\
+      id="testday"\
+      class="tab-content hidden fade-in bg-white dark:bg-gray-800 rounded-lg shadow p-6 max-h-[60vh] overflow-y-auto"\
+      tabindex="0"\
+    >\
+      <h2 class="text-3xl font-semibold mb-6 flex items-center space-x-3">\
+        <i data-feather="check-circle" class="w-7 h-7 text-blue-600 dark:text-blue-400"></i>\
+        <span>Test Day Tips (Sep 6, 2025)</span>\
+      </h2>\
+      <ul class="list-disc pl-5 space-y-4">\
+        <li>Arrive at the center 30 minutes early with valid ID.</li>\
+        <li>Eat a light meal before the test and stay hydrated.</li>\
+        <li>Take deep breaths \'97 stay calm and focused.</li>\
+        <li>Use noise-cancelling headphones and speak clearly into the mic.</li>\
+        <li>Trust your preparation. You've got this! \uc0\u55357 \u56490 </li>\
+      </ul>\
+      <img\
+        src="https://images.unsplash.com/photo-1573496770548-6e27b3e1189a?auto=format&fit=crop&w=800&q=80"\
+        alt="Focused student taking a test"\
+        class="rounded-lg shadow-lg mt-6 mx-auto max-w-full"\
+        loading="lazy"\
+      />\
+    </section>\
+  </main>\
+\
+  <footer class="text-center py-6 text-gray-500 dark:text-gray-400">\
+    &copy; 2025 PTE Academic Study Plan \'95 Made with \uc0\u10084 \u65039 \
+  </footer>\
+\
+  <script>\
+    // Feather icons initialization\
+    feather.replace();\
+\
+    // Tab navigation logic\
+    const tabs = document.querySelectorAll(".tab-btn");\
+    const tabContents = document.querySelectorAll(".tab-content");\
+\
+    tabs.forEach((btn) => \{\
+      btn.addEventListener("click", () => \{\
+        tabs.forEach((b) => \{\
+          b.classList.remove("bg-blue-500", "text-white");\
+          b.setAttribute("aria-current", "false");\
+        \});\
+        btn.classList.add("bg-blue-500", "text-white");\
+        btn.setAttribute("aria-current", "page");\
+\
+        const target = btn.dataset.tab;\
+        tabContents.forEach((c) => c.classList.add("hidden"));\
+        const activeContent = document.getElementById(target);\
+        activeContent.classList.remove("hidden");\
+        activeContent.focus();\
+      \});\
+    \});\
+\
+    // Theme toggle logic with icon switch\
+    const themeToggle = document.getElementById("theme-toggle");\
+    const iconSun = document.getElementById("icon-sun");\
+    const iconMoon = document.getElementById("icon-moon");\
+\
+    themeToggle.addEventListener("click", () => \{\
+      const darkMode = document.documentElement.classList.toggle("dark");\
+      if (darkMode) \{\
+        iconSun.classList.add("hidden");\
+        iconMoon.classList.remove("hidden");\
+      \} else \{\
+        iconSun.classList.remove("hidden");\
+        iconMoon.classList.add("hidden");\
+      \}\
+    \});\
+\
+    // Initialize icon states based on current theme\
+    if (document.documentElement.classList.contains("dark")) \{\
+      iconSun.classList.add("hidden");\
+      iconMoon.classList.remove("hidden");\
+    \} else \{\
+      iconSun.classList.remove("hidden");\
+      iconMoon.classList.add("hidden");\
+    \}\
+\
+    // Study plan data\
+    const startDate = new Date("2025-06-23");\
+    const endDate = new Date("2025-09-06");\
+    const dailyTasks = [\
+      \{\
+        task:\
+          "Grammar Practice (SVA, Tenses, Prepositions) from <a href='https://www.englishgrammar.org/' class='text-blue-500 hover:underline' target='_blank' rel='noopener noreferrer'>englishgrammar.org</a>",\
+        time: 30,\
+      \},\
+      \{\
+        task:\
+          "Watch a lesson from <a href='https://www.youtube.com/playlist?list=PLdawRnR9p0l5VBLysET6lxVnTkGNW-92k' class='text-blue-500 hover:underline' target='_blank' rel='noopener noreferrer'>E2 PTE Playlist</a>",\
+        time: 30,\
+      \},\
+      \{\
+        task:\
+          "Practice one section on <a href='https://ptepractice.com/' class='text-blue-500 hover:underline' target='_blank' rel='noopener noreferrer'>PTE Practice</a>",\
+        time: 60,\
+      \},\
+    ];\
+\
+    // Populate daily plan\
+    const dailyContainer = document.getElementById("daily-plan");\
+    let currentDate = new Date(startDate);\
+    let dayCount = 1;\
+    let totalStudyHours = 0;\
+\
+    while (currentDate <= endDate) \{\
+      const div = document.createElement("div");\
+      div.className = "bg-white dark:bg-gray-700 rounded-lg shadow p-5 card";\
+\
+      const dateStr = currentDate.toDateString();\
+      div.innerHTML = `<h3 class='text-xl font-bold text-blue-700 dark:text-blue-300 mb-3'>Day $\{dayCount\} \'97 $\{dateStr\}</h3>\
+        <ul class='list-disc pl-5 space-y-2'>$\{dailyTasks\
+          .map((d) => `<li>$\{d.task\} \'97 $\{d.time\} mins</li>`)\
+          .join("")\}</ul>`;\
+\
+      dailyContainer.appendChild(div);\
+      totalStudyHours += dailyTasks.reduce((sum, d) => sum + d.time, 0) / 60;\
+      currentDate.setDate(currentDate.getDate() + 1);\
+      dayCount++;\
+    \}\
+\
+    // Update stats on home page\
+    document.getElementById("stat-days").textContent = dayCount - 1;\
+    document.getElementById("stat-hours").textContent = totalStudyHours.toFixed(1) + "h";\
+  </script>\
+</body>\
+</html>\
+}
